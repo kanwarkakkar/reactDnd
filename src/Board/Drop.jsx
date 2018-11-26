@@ -1,19 +1,14 @@
-import React from 'react';
-import { PropTypes } from 'prop-types';
+    import React from 'react';
+    import { PropTypes } from 'prop-types';
 
-const Drop = ({ color, shape }) => (
-  <div className="board__drops__drop">
-    <div
-      style={{ backgroundColor: color }}
-      className="board__drops__drop__source"
-    />
-    <div className={`board__drops__drop__target board__drops__drop__target--${shape}`} />
-  </div>
-);
+    const Drop = ({ image,both, color,width,height }) => (
+      <div className={`board__drops__droptarget--${color}--${both}`}>
+      <img src={image} alt="Girl in a jacket" width={width} height={height}></img>
+      </div>
+    );
 
-Drop.propTypes = {
-  color: PropTypes.string.isRequired,
-  shape: PropTypes.string.isRequired,
-};
+    Drop.propTypes = {
+      color: PropTypes.string.isRequired,
+    };
 
-export default Drop;
+    export default Drop;
